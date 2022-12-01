@@ -14,7 +14,9 @@ use App\Http\Controllers\dbcontroller;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('firstmoc');
 });
+Route::view('/goexer','exercisestart');
 Route::post('/savedata',[dbcontroller::class,'savedb']);
 Route::get('/datapage',[dbcontroller::class,'dbview']);
+Route::get('/bl',[dbcontroller::class,'bringlist']);

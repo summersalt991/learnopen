@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gymdata;
+use App\Models\Gymlist;
 class dbcontroller extends Controller
 {
     
@@ -22,5 +23,9 @@ class dbcontroller extends Controller
        $data=Gymdata::all();
     
         return view('viewpage',['collection'=>$data]);
+}
+function bringlist(){
+    $da=Gymlist::all();
+    return view('exercisestart',['selecti'=>$da]);
 }
 }
